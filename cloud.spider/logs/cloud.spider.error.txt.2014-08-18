@@ -1,0 +1,366 @@
+2014-08-18 23:51:31,674 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - java.net.SocketTimeoutException: connect timed out
+2014-08-18 23:51:31,679 [main] [douban250ErrorId] [ERROR] [72] - 拉取第53条电影报错.
+2014-08-18 23:51:53,172 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-18 23:51:53,174 [main] [douban250ErrorId] [ERROR] [72] - 拉取第79条电影报错.
+2014-08-18 23:52:52,626 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1309027/
+2014-08-18 23:52:52,628 [main] [douban250ErrorId] [ERROR] [72] - 拉取第183条电影报错.
+2014-08-18 23:53:46,676 [main] [com.cloud.spider.service.MovieService] [ERROR] [106] - 拉取第228条电影的图片报错,iconUrl=http://img3.douban.com/mpic/s1428562.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-18 23:53:46,695 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第228条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-18 23:53:46,702 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-18 23:53:46,703 [main] [douban250ErrorId] [ERROR] [74] - 拉取第228条电影报错.
+2014-08-18 23:53:46,838 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1292047/
+2014-08-18 23:53:46,840 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:46,893 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/4023638/
+2014-08-18 23:53:46,894 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:46,955 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1301106/
+2014-08-18 23:53:46,957 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,009 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1292925/
+2014-08-18 23:53:47,010 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,068 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1304073/
+2014-08-18 23:53:47,069 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,124 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1292348/
+2014-08-18 23:53:47,126 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,184 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/3073124/
+2014-08-18 23:53:47,185 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,252 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/3018123/
+2014-08-18 23:53:47,253 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,308 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/6146955/
+2014-08-18 23:53:47,309 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,364 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/3824274/
+2014-08-18 23:53:47,366 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,422 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1291824/
+2014-08-18 23:53:47,423 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,481 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1294490/
+2014-08-18 23:53:47,482 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,534 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293145/
+2014-08-18 23:53:47,536 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,589 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1305725/
+2014-08-18 23:53:47,591 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,646 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1862151/
+2014-08-18 23:53:47,647 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,703 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1300741/
+2014-08-18 23:53:47,706 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,760 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1395091/
+2014-08-18 23:53:47,761 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,816 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/5908478/
+2014-08-18 23:53:47,817 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,872 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1292222/
+2014-08-18 23:53:47,873 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,925 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/3920977/
+2014-08-18 23:53:47,927 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:47,981 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1309060/
+2014-08-18 23:53:47,982 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:53:48,040 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1305666/
+2014-08-18 23:53:48,041 [main] [douban250ErrorId] [ERROR] [72] - 拉取第235条电影报错.
+2014-08-18 23:57:15,913 [main] [ExceptionCommonBase] [ERROR] [137] - ExceptionCommonBase
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:15,924 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第1条电影报错
+cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+	at cn.egame.common.exception.ExceptionCommonBase.throwExceptionCommonBase(ExceptionCommonBase.java:154)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:119)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:15,930 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+2014-08-18 23:57:15,932 [main] [douban250ErrorId] [ERROR] [74] - 拉取第1条电影报错.
+2014-08-18 23:57:16,719 [main] [ExceptionCommonBase] [ERROR] [137] - ExceptionCommonBase
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:16,726 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第2条电影报错
+cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+	at cn.egame.common.exception.ExceptionCommonBase.throwExceptionCommonBase(ExceptionCommonBase.java:154)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:119)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:16,738 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+2014-08-18 23:57:16,740 [main] [douban250ErrorId] [ERROR] [74] - 拉取第2条电影报错.
+2014-08-18 23:57:17,791 [main] [ExceptionCommonBase] [ERROR] [137] - ExceptionCommonBase
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:17,797 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第3条电影报错
+cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+	at cn.egame.common.exception.ExceptionCommonBase.throwExceptionCommonBase(ExceptionCommonBase.java:154)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:119)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:17,804 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+2014-08-18 23:57:17,812 [main] [douban250ErrorId] [ERROR] [74] - 拉取第3条电影报错.
+2014-08-18 23:57:18,785 [main] [ExceptionCommonBase] [ERROR] [137] - ExceptionCommonBase
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:18,799 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第4条电影报错
+cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+	at cn.egame.common.exception.ExceptionCommonBase.throwExceptionCommonBase(ExceptionCommonBase.java:154)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:119)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:18,805 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+2014-08-18 23:57:18,806 [main] [douban250ErrorId] [ERROR] [74] - 拉取第4条电影报错.
+2014-08-18 23:57:19,428 [main] [ExceptionCommonBase] [ERROR] [137] - ExceptionCommonBase
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:19,432 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第5条电影报错
+cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+	at cn.egame.common.exception.ExceptionCommonBase.throwExceptionCommonBase(ExceptionCommonBase.java:154)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:119)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm_id' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.MovieDao.updateMovieInfo(MovieDao.java:148)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:84)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+2014-08-18 23:57:19,436 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-4 / Message:Unknown column 'm_id' in 'where clause'
+2014-08-18 23:57:19,437 [main] [douban250ErrorId] [ERROR] [74] - 拉取第5条电影报错.
+2014-08-18 23:58:38,854 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [86] - java.net.SocketTimeoutException: Read timed out

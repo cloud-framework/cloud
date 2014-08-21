@@ -1,0 +1,688 @@
+2014-08-19 00:00:01,648 [main] [com.cloud.spider.service.MovieService] [ERROR] [106] - 拉取第18条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p648365452.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:00:01,660 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第18条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:00:01,676 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-19 00:00:01,676 [main] [douban250ErrorId] [ERROR] [74] - 拉取第18条电影报错.
+2014-08-19 00:01:01,083 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-19 00:01:01,083 [main] [douban250ErrorId] [ERROR] [72] - 拉取第79条电影报错.
+2014-08-19 00:02:13,653 [main] [com.cloud.spider.service.MovieService] [ERROR] [106] - 拉取第166条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p672363704.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:02:13,657 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第166条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:63)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:229)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:02:13,657 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-19 00:02:13,657 [main] [douban250ErrorId] [ERROR] [74] - 拉取第166条电影报错.
+2014-08-19 00:02:16,673 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - java.net.SocketTimeoutException: connect timed out
+2014-08-19 00:02:16,674 [main] [douban250ErrorId] [ERROR] [72] - 拉取第157条电影报错.
+2014-08-19 00:02:27,773 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1309027/
+2014-08-19 00:02:27,773 [main] [douban250ErrorId] [ERROR] [72] - 拉取第183条电影报错.
+2014-08-19 00:02:41,483 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/4739952/
+2014-08-19 00:02:41,483 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:41,545 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1756073/
+2014-08-19 00:02:41,545 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:41,608 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/6985810/
+2014-08-19 00:02:41,608 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:41,686 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1306249/
+2014-08-19 00:02:41,686 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:41,748 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1292055/
+2014-08-19 00:02:41,748 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:41,811 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293908/
+2014-08-19 00:02:41,811 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:41,889 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1959195/
+2014-08-19 00:02:41,889 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:41,952 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1292329/
+2014-08-19 00:02:41,952 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,014 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1301617/
+2014-08-19 00:02:42,014 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,092 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1438652/
+2014-08-19 00:02:42,092 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,155 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1291565/
+2014-08-19 00:02:42,155 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,217 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1316572/
+2014-08-19 00:02:42,217 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,280 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1291568/
+2014-08-19 00:02:42,280 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,358 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1302467/
+2014-08-19 00:02:42,359 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,423 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293399/
+2014-08-19 00:02:42,423 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,485 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1962116/
+2014-08-19 00:02:42,485 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,563 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293530/
+2014-08-19 00:02:42,563 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,626 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1298653/
+2014-08-19 00:02:42,626 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,688 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1844413/
+2014-08-19 00:02:42,688 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,751 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1428175/
+2014-08-19 00:02:42,767 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,829 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/3011051/
+2014-08-19 00:02:42,829 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,892 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293708/
+2014-08-19 00:02:42,892 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:42,954 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/3075287/
+2014-08-19 00:02:42,954 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:43,032 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [70] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293929/
+2014-08-19 00:02:43,032 [main] [douban250ErrorId] [ERROR] [72] - 拉取第209条电影报错.
+2014-08-19 00:02:43,095 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [86] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=225
+2014-08-19 00:12:12,852 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [101] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=0
+2014-08-19 00:12:34,339 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [101] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=0
+2014-08-19 00:12:46,983 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [101] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=0
+2014-08-19 00:14:05,645 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [101] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=0&timestamp=1408378445578
+2014-08-19 00:15:00,746 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [101] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=0&timestamp=1408378500695
+2014-08-19 00:15:35,603 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [102] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=0&timestamp=1408378535549
+2014-08-19 00:15:46,576 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [102] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=0&timestamp=1408378546525
+2014-08-19 00:34:16,526 [main] [com.cloud.spider.service.MovieService] [ERROR] [106] - 拉取第48条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p1374546770.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:87)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:279)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:34:16,541 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第48条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:87)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:279)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:34:16,546 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-19 00:34:16,547 [main] [douban250ErrorId] [ERROR] [98] - 拉取第48条电影报错.
+2014-08-19 00:35:16,079 [main] [com.cloud.spider.service.MovieService] [ERROR] [106] - 拉取第94条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p1962839732.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:87)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:279)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:35:16,091 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第94条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:87)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:279)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:35:16,097 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-19 00:35:16,098 [main] [douban250ErrorId] [ERROR] [98] - 拉取第94条电影报错.
+2014-08-19 00:36:40,848 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1301169%2F
+2014-08-19 00:36:40,849 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:36:41,308 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F3217169%2F
+2014-08-19 00:36:41,308 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:36:41,771 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1867345%2F
+2014-08-19 00:36:41,772 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:36:45,210 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [110] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26timestamp%3D1408379805034
+2014-08-19 00:37:37,450 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [110] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26timestamp%3D1408379857266
+2014-08-19 00:45:32,120 [main] [com.cloud.spider.service.MovieService] [ERROR] [106] - 拉取第94条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p1962839732.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:87)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:279)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:45:32,134 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第94条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:87)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:279)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:45:32,142 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-19 00:45:32,143 [main] [douban250ErrorId] [ERROR] [98] - 拉取第94条电影报错.
+2014-08-19 00:46:40,122 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F5989818%2F
+2014-08-19 00:46:40,123 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:43,457 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1308767%2F
+2014-08-19 00:46:43,458 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:43,895 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F2300586%2F
+2014-08-19 00:46:43,896 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:44,303 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1309027%2F
+2014-08-19 00:46:44,304 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:44,726 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1307315%2F
+2014-08-19 00:46:44,727 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:45,192 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F3011235%2F
+2014-08-19 00:46:45,193 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:45,655 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1292214%2F
+2014-08-19 00:46:45,656 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:46,091 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1299327%2F
+2014-08-19 00:46:46,092 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:46,531 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1307811%2F
+2014-08-19 00:46:46,532 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:46,988 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1308777%2F
+2014-08-19 00:46:46,989 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:47,413 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1291557%2F
+2014-08-19 00:46:47,414 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:47,822 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1401118%2F
+2014-08-19 00:46:47,822 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:51,101 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1291844%2F
+2014-08-19 00:46:51,102 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:51,544 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1292062%2F
+2014-08-19 00:46:51,545 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:51,982 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1292287%2F
+2014-08-19 00:46:51,983 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:52,459 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1291992%2F
+2014-08-19 00:46:52,460 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:52,918 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1301171%2F
+2014-08-19 00:46:52,919 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:53,329 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1907966%2F
+2014-08-19 00:46:53,330 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:53,771 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1301169%2F
+2014-08-19 00:46:53,771 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:54,220 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F3217169%2F
+2014-08-19 00:46:54,221 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:54,637 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [94] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1867345%2F
+2014-08-19 00:46:54,638 [main] [douban250ErrorId] [ERROR] [96] - 拉取第183条电影报错.
+2014-08-19 00:46:55,056 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [110] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26timestamp%3D1408380414919
+2014-08-19 00:52:55,905 [main] [com.cloud.spider.service.MovieService] [ERROR] [106] - 拉取第41条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p462657443.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:90)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:52:55,919 [main] [com.cloud.spider.service.MovieService] [ERROR] [132] - 拉取第41条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:90)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-19 00:52:55,923 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-19 00:52:55,924 [main] [douban250ErrorId] [ERROR] [101] - 拉取第41条电影报错.
+2014-08-19 00:53:03,227 [main] [com.cloud.spider.service.MovieService] [ERROR] [204] - 更新t_parameter_tag_link表数据失败
+java.util.IllegalFormatConversionException: d != java.lang.Boolean
+	at java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4045)
+	at java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2748)
+	at java.util.Formatter$FormatSpecifier.print(Formatter.java:2702)
+	at java.util.Formatter.format(Formatter.java:2494)
+	at java.util.Formatter.format(Formatter.java:2423)
+	at java.lang.String.format(String.java:2797)
+	at com.cloud.spider.dao.ParameterDao.insertParameterTagLinkInfo(ParameterDao.java:27)
+	at com.cloud.spider.service.MovieService.updateMovieTagLink(MovieService.java:199)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:110)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 00:53:03,231 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [113] - java.util.IllegalFormatConversionException: d != java.lang.Boolean
+2014-08-19 00:55:57,932 [main] [com.cloud.spider.service.MovieService] [ERROR] [204] - 更新t_parameter_tag_link表数据失败
+java.util.IllegalFormatConversionException: d != java.lang.Boolean
+	at java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4045)
+	at java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2748)
+	at java.util.Formatter$FormatSpecifier.print(Formatter.java:2702)
+	at java.util.Formatter.format(Formatter.java:2494)
+	at java.util.Formatter.format(Formatter.java:2423)
+	at java.lang.String.format(String.java:2797)
+	at com.cloud.spider.dao.ParameterDao.insertParameterTagLinkInfo(ParameterDao.java:27)
+	at com.cloud.spider.service.MovieService.updateMovieTagLink(MovieService.java:199)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:110)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 00:55:57,940 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [113] - java.util.IllegalFormatConversionException: d != java.lang.Boolean
+2014-08-19 00:58:19,008 [main] [com.cloud.spider.service.MovieService] [ERROR] [204] - 更新t_parameter_tag_link表数据失败
+java.util.IllegalFormatConversionException: d != java.lang.Boolean
+	at java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4045)
+	at java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2748)
+	at java.util.Formatter$FormatSpecifier.print(Formatter.java:2702)
+	at java.util.Formatter.format(Formatter.java:2494)
+	at java.util.Formatter.format(Formatter.java:2423)
+	at java.lang.String.format(String.java:2797)
+	at com.cloud.spider.dao.ParameterDao.insertParameterTagLinkInfo(ParameterDao.java:27)
+	at com.cloud.spider.service.MovieService.updateMovieTagLink(MovieService.java:199)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:110)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 00:58:19,016 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [113] - java.util.IllegalFormatConversionException: d != java.lang.Boolean
+2014-08-19 01:06:51,265 [main] [ExceptionCommonBase] [ERROR] [137] - ExceptionCommonBase
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'tag_id' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1039)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2620)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1662)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1581)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeUpdate(DruidPooledStatement.java:135)
+	at cn.egame.common.data.BaseDao.executeUpdate(BaseDao.java:117)
+	at com.cloud.spider.dao.ParameterDao.insertParameterTagLinkInfo(ParameterDao.java:33)
+	at com.cloud.spider.dao.ParameterDao.main(ParameterDao.java:57)
+2014-08-19 15:39:04,376 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1294638%2F
+2014-08-19 15:39:04,377 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:07,929 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1292659%2F
+2014-08-19 15:39:07,929 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:08,378 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1865703%2F
+2014-08-19 15:39:08,378 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:08,826 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F2365260%2F
+2014-08-19 15:39:08,827 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:09,324 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1308575%2F
+2014-08-19 15:39:09,324 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:09,775 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1297478%2F
+2014-08-19 15:39:09,775 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:10,219 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F3157605%2F
+2014-08-19 15:39:10,220 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:10,673 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1304102%2F
+2014-08-19 15:39:10,674 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:14,083 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1292233%2F
+2014-08-19 15:39:14,083 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:14,530 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1302476%2F
+2014-08-19 15:39:14,530 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:15,102 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1305690%2F
+2014-08-19 15:39:15,103 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:15,567 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Fsubject%2F1292218%2F
+2014-08-19 15:39:15,568 [main] [douban250ErrorId] [ERROR] [99] - 拉取第157条电影报错.
+2014-08-19 15:39:18,867 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [113] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://www.douban.com/misc/sorry?original-url=http%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26timestamp%3D1408433958719
+2014-08-19 15:59:05,847 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [113] - java.net.SocketTimeoutException: connect timed out
+2014-08-19 16:01:38,959 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:01:38,975 [main] [douban250ErrorId] [ERROR] [99] - 拉取第79条电影报错..
+2014-08-19 16:02:45,073 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1309027/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:02:45,074 [main] [douban250ErrorId] [ERROR] [99] - 拉取第183条电影报错..
+2014-08-19 16:03:06,628 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1291565/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:06,628 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:09,760 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1316572/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:09,761 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:12,926 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:275)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:334)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:687)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:633)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1323)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:468)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:443)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:12,928 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:19,030 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:996)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:932)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:850)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:439)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:19,032 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:19,237 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293399/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:19,238 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:19,447 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1962116/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:19,448 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:19,647 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293530/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:19,647 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:19,850 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1298653/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:19,851 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:20,056 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1844413/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:20,057 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:20,254 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1428175/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:20,255 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:20,459 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/3011051/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:20,460 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:20,667 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293708/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:20,668 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:20,870 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/3075287/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:20,871 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:21,069 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [97] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/subject/1293929/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:164)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:89)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:282)
+2014-08-19 16:03:21,069 [main] [douban250ErrorId] [ERROR] [99] - 拉取第209条电影报错..
+2014-08-19 16:03:21,269 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [113] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=225&timestamp=1408435401203
+2014-08-19 20:01:54,011 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [122] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=0&timestamp=1408449713943
+2014-08-19 20:02:25,963 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [122] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=403, URL=http://movie.douban.com/top250?start=0&timestamp=1408449745894

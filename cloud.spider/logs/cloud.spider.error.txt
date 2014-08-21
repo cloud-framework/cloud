@@ -1,0 +1,20 @@
+2014-08-21 15:55:40,858 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [99] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:170)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:287)
+2014-08-21 15:55:40,878 [main] [douban250ErrorId] [ERROR] [101] - 拉取第100条电影报错..
+2014-08-21 15:56:46,644 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [99] - 
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1309027/
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:424)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:178)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:167)
+	at com.cloud.spider.handler.SpiderDouBan250.parseMovieInfoFromWeb(SpiderDouBan250.java:170)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:91)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:287)
+2014-08-21 15:56:46,645 [main] [douban250ErrorId] [ERROR] [101] - 拉取第183条电影报错..

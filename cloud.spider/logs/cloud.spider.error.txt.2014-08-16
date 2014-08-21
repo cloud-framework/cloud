@@ -1,0 +1,271 @@
+2014-08-16 14:08:57,018 [main] [com.cloud.spider.service.MovieService] [ERROR] [101] - 拉取第10条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p579729551.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:57)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:215)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:08:57,034 [main] [com.cloud.spider.service.MovieService] [ERROR] [122] - 拉取第10条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:57)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:215)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:08:57,043 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [65] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-16 14:08:57,044 [main] [douban250ErrorId] [ERROR] [66] - 拉取第10条电影报错.
+2014-08-16 14:10:04,786 [main] [com.cloud.spider.service.MovieService] [ERROR] [101] - 拉取第68条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p1613191025.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:57)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:215)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:10:04,796 [main] [com.cloud.spider.service.MovieService] [ERROR] [122] - 拉取第68条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:57)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:215)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:10:04,803 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [65] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-16 14:10:04,805 [main] [douban250ErrorId] [ERROR] [66] - 拉取第68条电影报错.
+2014-08-16 14:10:31,424 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [65] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:11:46,186 [main] [com.cloud.spider.service.MovieService] [ERROR] [101] - 拉取第3条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p510876400.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:57)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:215)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:11:46,202 [main] [com.cloud.spider.service.MovieService] [ERROR] [122] - 拉取第3条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:57)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:215)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:11:46,211 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [65] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-16 14:11:46,212 [main] [douban250ErrorId] [ERROR] [66] - 拉取第3条电影报错.
+2014-08-16 14:13:03,545 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [65] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:21:17,194 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:21:17,196 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [84] - java.lang.NullPointerException
+2014-08-16 14:26:47,256 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:29:53,220 [main] [com.cloud.spider.service.MovieService] [ERROR] [101] - 拉取第52条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p1208603335.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:69)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:227)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:29:53,234 [main] [com.cloud.spider.service.MovieService] [ERROR] [122] - 拉取第52条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:69)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:227)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:29:53,239 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-16 14:29:53,242 [main] [douban250ErrorId] [ERROR] [78] - 52条电影报错.
+2014-08-16 14:30:27,822 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:30:27,828 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [84] - java.lang.NullPointerException
+2014-08-16 14:32:45,699 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:32:45,701 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [84] - java.lang.NullPointerException
+2014-08-16 14:33:35,101 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:33:35,103 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [84] - java.lang.NullPointerException
+2014-08-16 14:34:02,425 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:35:21,971 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:37:21,755 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:37:23,552 [main] [douban250ErrorId] [ERROR] [79] - 拉取第100条电影报错.
+2014-08-16 14:38:39,080 [main] [com.cloud.spider.service.MovieService] [ERROR] [101] - 拉取第27条电影的图片报错,iconUrl=http://img3.douban.com/view/movie_poster_cover/spst/public/p1910897265.jpg
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:69)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:231)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:38:39,093 [main] [com.cloud.spider.service.MovieService] [ERROR] [122] - 拉取第27条电影报错
+org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at com.cloud.spider.util.HttpUtils.getInputStreamLengthFromUrl(HttpUtils.java:24)
+	at com.cloud.spider.service.MovieService.spiderDoubanMovieInfo(MovieService.java:88)
+	at com.cloud.spider.handler.SpiderDouBan250.run(SpiderDouBan250.java:69)
+	at com.cloud.spider.handler.SpiderDouBan250.main(SpiderDouBan250.java:231)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 9 more
+2014-08-16 14:38:39,099 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.apache.http.conn.HttpHostConnectException: Connection to http://img3.douban.com refused
+2014-08-16 14:38:39,100 [main] [douban250ErrorId] [ERROR] [81] - 拉取第27条电影报错.
+2014-08-16 14:39:37,750 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1417598/
+2014-08-16 14:39:37,752 [main] [douban250ErrorId] [ERROR] [79] - 拉取第79条电影报错.
+2014-08-16 14:40:44,496 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - java.net.SocketTimeoutException: connect timed out
+2014-08-16 14:40:44,497 [main] [douban250ErrorId] [ERROR] [79] - 拉取第183条电影报错.
+2014-08-16 14:40:45,999 [main] [com.cloud.spider.handler.SpiderDouBan250] [ERROR] [77] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://movie.douban.com/subject/1309027/
+2014-08-16 14:40:46,002 [main] [douban250ErrorId] [ERROR] [79] - 拉取第183条电影报错.
