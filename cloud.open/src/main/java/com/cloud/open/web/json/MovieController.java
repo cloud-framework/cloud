@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.cloud.open.web.json.base.JsonController;
+import cn.egame.common.exception.ExceptionCommonBase;
+
+import com.cloud.open.web.json.base.JsonView;
 import com.cloud.valueobject.vo.MovieInfo;
 
 @Controller
 @RequestMapping(value = "movie")
-public class MovieController extends JsonController {
+public class MovieController {
 	@ResponseBody
 	@RequestMapping(value = "login", method =RequestMethod.GET)
 	public Object loginPage(HttpServletRequest request,
@@ -23,5 +25,18 @@ public class MovieController extends JsonController {
 		movieInfo.setDirectors("wendellup");
 		movieInfo.setDoubanId("doubanId");
 		return movieInfo;
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "test", method =RequestMethod.GET)
+	public JsonView test(HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		MovieInfo movieInfo = new MovieInfo();
+		movieInfo.setDirectors("wendellup");
+		movieInfo.setDoubanId("doubanId");
+		if(1==1)
+		throw ExceptionCommonBase.throwExceptionCommonBase(new RuntimeException("xxx"));
+		return new JsonView(movieInfo);
+//		return movieInfo;
 	}
 }

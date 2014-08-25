@@ -18,11 +18,18 @@
 						<resource>
 							<directory>WebRoot</directory>
 						</resource>
+						<resource>
+							<directory>${project.basedir}/lib</directory>
+							<targetPath>WEB-INF/lib</targetPath>
+							<filtering>true</filtering>
+							<includes>
+								<include>**/*.jar</include>
+							</includes>
+						</resource>
 					</webResources>
 				</configuration>
 			</plugin>
 		</plugins>
-
 	</build>
 
 	<properties>
@@ -142,6 +149,20 @@
 		</dependency>
 
 		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>egame.common</groupId>
+			<artifactId>egame.common</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/WebRoot/WEB-INF/lib/egame.common.jar</systemPath>
+		</dependency>
+
+		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.2-1003-jdbc4</version>
@@ -151,5 +172,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.25</version>
 		</dependency>
+
 	</dependencies>
+
 </project>
