@@ -1,1 +1,10 @@
-/target
+/*
+!.gitignore
+!/.settings/
+!/src/
+!/test/
+!/WebRoot/
+!/.classpath
+!/.gitignore
+!/.project
+!/pom.xml
