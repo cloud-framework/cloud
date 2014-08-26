@@ -1,8 +1,15 @@
 package com.cloud.valueobject.vo;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
 
-public class MovieInfo {
+import javax.xml.bind.annotation.XmlRootElement;
+
+import org.springframework.jdbc.core.RowMapper;
+
+@XmlRootElement 
+public class MovieInfo implements RowMapper<MovieInfo>{
 	private Long id;
 	private Long movieSubType;
 	private String movieName;
@@ -166,7 +173,33 @@ public class MovieInfo {
 	public void setOperatorName(String operatorName) {
 		this.operatorName = operatorName;
 	}
-	
-	
+	@Override
+	public MovieInfo mapRow(ResultSet rs, int arg1) throws SQLException {
+		MovieInfo info = new MovieInfo();
+		info.setId(rs.getLong("id"));
+		info.setMovieSubType(rs.getLong("movie_subtype"));
+		info.setMovieName(rs.getString("movie_name"));
+		info.setMovieOriginalName(rs.getString("movie_original_name"));
+		info.setMovieAliasName(rs.getString("movie_alias_name"));
+		info.setLeadingRole(rs.getString("leading_role"));
+		info.setScreenWriter(rs.getString("screen_writer"));
+		info.setDirectors(rs.getString("directors"));
+		info.setReleaseTime(rs.getString("release_time"));
+		info.setMovieLength(rs.getString("movie_length"));
+		info.setRegion(rs.getString("region"));
+		info.setLanguage(rs.getString("language"));
+		info.setType(rs.getString("type"));
+		info.setImdbId(rs.getString("imdb_id"));
+		info.setImdbRate(rs.getString("imdb_rate"));
+		info.setDoubanId(rs.getString("douban_id"));
+		info.setDoubanRate(rs.getString("douban_rate"));
+		info.setMoviestatus(rs.getLong("movie_status"));
+		info.setOperatorId(rs.getLong("operator_id"));
+		info.setInsertTime(rs.getDate("insert_time"));
+		info.setUpdateTime(rs.getDate("update_time"));
+		info.setIntroduction(rs.getString("introduction"));
+		info.setOperatorName(rs.getString("operator_name"));
+		return info;
+	}
 	
 }
