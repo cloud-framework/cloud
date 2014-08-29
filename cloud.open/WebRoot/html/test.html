@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Bootstrap -->
 <script src="../js/jquery-1.11.0.js"></script>
-<script src="../js/common.js"></script>
-<script src="../js/movie.js"></script>
+<script src="../js/test.js"></script>
 </head>
 <body>
 	<table id="t1">
@@ -14,10 +13,13 @@
 	<br />
 	
 	<div id="d_page1">
-		
+		<div onclick="alert(1)" style='cursor:pointer'>d_page1</div>
 	</div>
 	<div id="d_page2">
-		
+		<a onclick='alert(2)' style='cursor:pointer'>d_page2</a>
+		<!-- 
+		<a onclick='alert(1)' style='cursor:pointer'>d_page2</a>
+		 -->
 	</div>
 </body>
 </html>

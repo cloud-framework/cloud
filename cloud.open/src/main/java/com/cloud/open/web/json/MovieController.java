@@ -20,6 +20,7 @@ import cn.egame.common.util.Utils;
 import com.cloud.open.dao.MovieDao;
 import com.cloud.open.web.json.base.JsonView;
 import com.cloud.valueobject.vo.MovieInfo;
+import com.cloud.valueobject.vo.PageDataVO;
 
 @Controller
 @RequestMapping(value = "movie")
@@ -52,7 +53,7 @@ public class MovieController {
 	}
 	
 	@ResponseBody
-	@RequestMapping(value = "/movie/list/current_page/{current_page}/page_size/{page_size}", method =RequestMethod.GET)
+	@RequestMapping(value = "/list/current_page/{current_page}/page_size/{page_size}", method =RequestMethod.GET)
 	public Object listMovie(@PathVariable("current_page") Integer page
 			, @PathVariable("page_size") Integer rowsOfPage, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
@@ -62,7 +63,8 @@ public class MovieController {
 		if (page < retPd.getPageCount()) {
 			retPd.setContent(Utils.page(movieList, page, rowsOfPage));
 		}
-		return retPd;
+		
+		return new PageDataVO(retPd);
 //			return movieDao.listMovies().get(0);
 //		MovieInfo movieInfo = new MovieInfo();
 //		movieInfo.setDirectors("wendellup");
