@@ -281,8 +281,6 @@ public class SpiderDouBan250 {
 	}
 
 	public static void main(String[] args) {
-		// String str = "aaa/bbb";
-		// System.out.println(Utils.toString(str.split("/")));
 		Utils.initLog4j();
 		run(args);
 //		Utils.initLog4j();

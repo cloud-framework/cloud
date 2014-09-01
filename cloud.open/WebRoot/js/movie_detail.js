@@ -1,16 +1,50 @@
 $(document).ready(function () {
+	movieName = "";
 //	var gobalHtmlUrlVal = window.location.pathname+window.location.search;
-	var currentPage = getQueryString("current_page");
-	if(currentPage==null){
-		currentPage = 0;
+//	var currentPage = getQueryString("current_page");
+//	if(currentPage==null){
+//		currentPage = 0;
+//	}
+//	var rowsOfPage = getQueryString("page_size");
+//	if(rowsOfPage==null){
+//		rowsOfPage = 20;
+//	}
+//	loadData(currentPage, rowsOfPage);
+	var id = getQueryString("id");
+	loadData(id);
+	alert("end loadData---->"+movieName);
+	if(movieName!=""){
+		loadTorrent(movieName);
 	}
-	var rowsOfPage = getQueryString("page_size");
-	if(rowsOfPage==null){
-		rowsOfPage = 20;
-	}
-	loadData(currentPage, rowsOfPage);
 });
 
+function loadData(id){
+	var url = "/movie/detail/id/" + id;
+	$.ajax({
+		url : url,
+		dataType : "json",
+		async:false,
+	}).done(function(result) {// ajax的done解析result
+		$("#d_page1").append("电影名称为:" + result.movieName);
+		movieName = result.movieName;
+	});
+	alert("in loadData-------->"+movieName);
+}
+
+function loadTorrent(movieName){
+	var url = "/movie/resource/key/"+movieName+"/current_page/0/type/1";
+	$.ajax({ url: url, dataType: "json" })
+    .done(function (result) {//ajax的done解析result
+        $.each(result.content, function (i,item) {
+        	$("#t1").append(
+                    "<tr>" +
+                    	"<td><a href='"+item.torrentUrl+"'>" + item.torrentName + "</a></td>" + 
+                    "</tr>");
+        });
+    });
+}
+
+/*
 function changeUrl(current_page, rows_of_page){
 	var htmlUrlVal = "?current_page="+current_page+"&page_size="+rows_of_page;
 	window.location.search = htmlUrlVal;
@@ -31,14 +65,13 @@ function loadData(current_page, rows_of_page){
         $.each(result.content, function (i,item) {
         	$("#t1").append(
                     "<tr>" +
-                    	"<td>" + item.id + "</td>" + 
-	                    "<td><a href='movie_detail.html?id="+item.id+"'>" + item.movieName+ "</a></td>" +
+                    	"<td><a href='movie_detail.html'>" + item.id + "</a></td>" + 
+	                    "<td>" + item.movieName+ "</td>" +
 	                    "<td>" + item.doubanId + "</td>" +
                     "</tr>");
         });
     });
 	
-	/** 分页相关数据 */
 	//1.分页插件
 	$.ajax({ url: jsonurlVal, dataType: "json" })
     .done(function (result) {//ajax的done解析result
@@ -67,3 +100,4 @@ function loadData(current_page, rows_of_page){
 			});
 	
 }
+*/
