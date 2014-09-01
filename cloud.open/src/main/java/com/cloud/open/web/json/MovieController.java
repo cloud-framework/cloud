@@ -65,10 +65,32 @@ public class MovieController {
 		}
 		
 		return new PageDataVO(retPd);
-//			return movieDao.listMovies().get(0);
-//		MovieInfo movieInfo = new MovieInfo();
-//		movieInfo.setDirectors("wendellup");
-//		movieInfo.setDoubanId("doubanId");
-//		return movieInfo;
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/detail/id/{id}", method = RequestMethod.GET)
+	public Object movieDetail(@PathVariable("id") Integer id, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		MovieInfo movieInfo = movieDao.getMovieInfoById(id);
+		return movieInfo;
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/resource/key/{key}/current_page/{current_page}/type/{type}", method = RequestMethod.GET)
+	public Object queryResource(@PathVariable("key") String key
+			, @PathVariable("current_page") String current_page, @PathVariable("type") Integer type 
+			, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		if(type==1){
+			//google自定义搜索
+			String queryStr = "https://www.google.com/cse?cx=006369457434482665413:mnzddbuz2ke&ie=UTF-8&q=";
+			queryStr += "&ref=#gsc.q="+key;
+			queryStr += "&gsc.page="+current_page;
+		}else if(type==2){
+			String queryStr = "http://torrentproject.com/?t=";
+			queryStr += key;
+		}
+		
+		return null;
 	}
 }

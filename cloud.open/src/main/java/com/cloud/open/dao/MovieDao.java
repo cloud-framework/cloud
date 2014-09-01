@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import cn.egame.common.data.SqlUtils;
 import cn.egame.common.exception.ExceptionCommonBase;
 
 import com.cloud.valueobject.vo.MovieInfo;
@@ -33,6 +34,17 @@ public class MovieDao {
 		logger.info(sql);
 		List<MovieInfo> list = jdbcTemplate.query(sql, new MovieInfo());
 		return list;
+	}
+	
+	public MovieInfo getMovieInfoById(Integer id) throws ExceptionCommonBase {
+		MovieInfo movieInfo = null;
+		String sql = " select " + STR_T_MOVIE_FIELD + " from t_movie where id = ? ";
+		logger.info(sql);
+		List<MovieInfo> list = jdbcTemplate.query(sql, new Object[]{id}, new MovieInfo());
+		if(list!=null && list.size()>0){
+			movieInfo = list.get(0);
+		}
+		return movieInfo;
 	}
 	
 	/*
