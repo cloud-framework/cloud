@@ -12,7 +12,7 @@ $(document).ready(function () {
 //	loadData(currentPage, rowsOfPage);
 	var id = getQueryString("id");
 	loadData(id);
-	alert("end loadData---->"+movieName);
+//	alert("end loadData---->"+movieName);
 	if(movieName!=""){
 		loadTorrent(movieName);
 	}
@@ -28,14 +28,14 @@ function loadData(id){
 		$("#d_page1").append("电影名称为:" + result.movieName);
 		movieName = result.movieName;
 	});
-	alert("in loadData-------->"+movieName);
+//	alert("in loadData-------->"+movieName);
 }
 
 function loadTorrent(movieName){
-	var url = "/movie/resource/key/"+movieName+"/current_page/0/type/1";
+	var url = "/movie/resource/key/"+encodeURIComponent(movieName)+"/current_page/0/type/2";
 	$.ajax({ url: url, dataType: "json" })
     .done(function (result) {//ajax的done解析result
-        $.each(result.content, function (i,item) {
+        $.each(result, function (i,item) {
         	$("#t1").append(
                     "<tr>" +
                     	"<td><a href='"+item.torrentUrl+"'>" + item.torrentName + "</a></td>" + 
