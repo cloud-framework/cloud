@@ -1,5 +1,6 @@
 package com.cloud.open.web.json;
 
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -99,29 +100,27 @@ public class MovieController {
 			queryStr += "&gsc.page="+current_page;
 		}else if(type==2){
 			queryStr = "http://torrentproject.com/?t=";
+//			key = URLEncoder.encode(key, "utf-8");
 			queryStr += key;
 		}
+		
+//		System.getProperties().setProperty("proxySet", "true");
+//        System.getProperties().setProperty("http.proxyHost", "49.213.20.171");
+//        System.getProperties().setProperty("http.proxyPort", "8080");
 		
 		Document doc = null;
 		int loop = 0;
 		while (true) {
 			try {
 				doc = Jsoup.connect(queryStr)
-						.timeout(10000)
-//						.header("User-Agent", UserAgentAry[Utils.getRandom(UserAgentAry.length)])
-//						.header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
-//						.header("Accept-Encoding", "gzip,deflate,sdch")
-//						.header("Accept-Language", "en-US,en;q=0.8,ja;q=0.6,zh-CN;q=0.4,zh;q=0.2")
-//						.header("Connection", "keep-alive")
-//						.header("Cache-Control", "max-age=0")
-//						.header("Cookie", "bid=\""+SpiderUtils.getRandomStr(11)+"\"; ")
+						.timeout(30000)
 						.get();
 				if (doc != null) {
 					break;
 				}
 				Thread.sleep(500);
 			} catch (Exception e) {
-				logger.info("第" + (loop + 1) + "次搜索数据失败", e);
+				logger.info("第" + (loop + 1) + "次搜索数据失败,拉取的url为"+queryStr, e);
 				loop++;
 				if (loop >= 3) {
 					throw e;
@@ -142,20 +141,21 @@ public class MovieController {
 	private List<SearchResultVO> listSearchResultVOfromTorrentNet(Document doc){
 		List<SearchResultVO> searchResultVOs = new ArrayList<SearchResultVO>();
 		if(doc != null){
-			Element content = doc.getElementById("tt");
+			Element content = doc.getElementById("similarfiles");
 			if(content!=null){
 				SearchResultVO vo = null;
 				Elements divs = content.select("div");
 				for(Element div : divs){
-					if(div.hasAttr("gac_bb")){
+					if(div.hasClass("gac_bb")
+							|| div.hasClass("tt")){
 						continue;
 					}
 					Elements spans = div.select("span");
-					if(spans!=null && spans.size()==5){
+					if(spans!=null && spans.size()>0){
 						vo = new SearchResultVO();
 						vo.setTorrentName(spans.get(0).text());
-						vo.setTorrentUrl(spans.get(0).attr("href"));
-						vo.setSize(spans.get(4).text());
+						vo.setTorrentUrl(spans.get(0).getElementsByAttribute("href").attr("href"));
+						vo.setSize(spans.get(spans.size()-1).text());
 						searchResultVOs.add(vo);
 					}
 				}
