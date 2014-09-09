@@ -27,7 +27,7 @@
 			<list>
 				<ref bean="stringHttpMessageConverter" />
 				<ref bean="jsonHttpMessageConverter" />
-				<ref bean="marshallingHttpMessageConverter" />
+				<!-- <ref bean="marshallingHttpMessageConverter" /> -->
 			</list>
 		</property>
 	</bean>
@@ -37,7 +37,7 @@
 	<bean id="jsonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
 	<!-- <bean id="jsonHttpMessageConverter" class="com.cloud.open.web.json.base.CloudMappingJacksonHttpMessageConverter" /> -->
 
-	<bean id="marshallingHttpMessageConverter"
+<!-- 	<bean id="marshallingHttpMessageConverter"
 		class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
 		<constructor-arg ref="jaxbMarshaller" />
 		<property name="supportedMediaTypes" value="application/xml"></property>
@@ -49,7 +49,7 @@
 				<value>com.cloud.valueobject.vo.MovieInfo</value>
 			</list>
 		</property>
-	</bean>
+	</bean> -->
 
 	
 	
