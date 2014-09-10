@@ -1,6 +1,5 @@
 package com.cloud.open.web.json;
 
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +28,7 @@ import com.cloud.open.web.json.base.JsonView;
 import com.cloud.valueobject.vo.MovieInfo;
 import com.cloud.valueobject.vo.PageDataVO;
 import com.cloud.valueobject.vo.SearchResultVO;
+import com.sina.sae.fetchurl.SaeFetchurl;
 
 @Controller
 @RequestMapping(value = "movie")
@@ -112,9 +112,13 @@ public class MovieController {
 		int loop = 0;
 		while (true) {
 			try {
-				doc = Jsoup.connect(queryStr)
-						.timeout(30000)
-						.get();
+				SaeFetchurl fetchUrl = new SaeFetchurl("4j24mwozzl","hy33hmj52k403w42k02kykhmyl0j3m1jm34jxwxk");
+				String content = fetchUrl.fetch(queryStr);
+				logger.info("fetchInfo........"+content);
+//				doc = Jsoup.connect(queryStr)
+//						.timeout(30000)
+//						.get();
+				doc = Jsoup.parse(content);		
 				if (doc != null) {
 					break;
 				}
@@ -163,5 +167,16 @@ public class MovieController {
 		}
 		
 		return searchResultVOs;
+	}
+	
+	public static void main(String[] args) {
+		SaeFetchurl fetchUrl = new SaeFetchurl();
+		String content = fetchUrl.fetch("http://wendellup.sinaapp.com/html/movie_detail.html?id=3");
+//		System.out.println(content);
+		
+		String url = "http://wendellup.sinaapp.com/html/movie_detail.html?id=3";
+		Document doc = new Document(content);
+//		System.out.println(doc.);
+		System.out.println(doc.toString());
 	}
 }
