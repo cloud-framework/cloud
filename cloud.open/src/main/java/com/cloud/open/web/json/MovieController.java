@@ -170,12 +170,12 @@ public class MovieController {
 	}
 	
 	public static void main(String[] args) {
-		SaeFetchurl fetchUrl = new SaeFetchurl();
+		SaeFetchurl fetchUrl = new SaeFetchurl("4j24mwozzl","hy33hmj52k403w42k02kykhmyl0j3m1jm34jxwxk");
 		String content = fetchUrl.fetch("http://wendellup.sinaapp.com/html/movie_detail.html?id=3");
 //		System.out.println(content);
 		
 		String url = "http://wendellup.sinaapp.com/html/movie_detail.html?id=3";
-		Document doc = new Document(content);
+		Document doc = Jsoup.parse(content);
 //		System.out.println(doc.);
 		System.out.println(doc.toString());
 	}
