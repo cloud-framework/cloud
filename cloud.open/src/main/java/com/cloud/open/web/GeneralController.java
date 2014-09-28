@@ -13,4 +13,9 @@ public class GeneralController {
 		model.addAttribute("liming", "黎明你好");
 		System.out.println("index.jsp");
 	}
+	
+	@RequestMapping(value="/")
+	public String redirectToIndex(Model model){
+		return "html/help.html";
+	}
 }
