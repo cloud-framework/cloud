@@ -14,8 +14,8 @@ public class GeneralController {
 		System.out.println("index.jsp");
 	}
 	
-	@RequestMapping(value="/")
-	public String redirectToIndex(Model model){
-		return "html/help.html";
-	}
+//	@RequestMapping(value="/")
+//	public String redirectToIndex(Model model){
+//		return "html/help.html";
+//	}
 }

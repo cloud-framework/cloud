@@ -113,7 +113,7 @@ public class MovieService {
 			fileInfo.setFileType(FileUsedType.file);
 			fileInfo.setFileSize(fileSize);
 			fileInfo.setSaveName(Utils.getFileName(movieBO.getIconUrl()));
-			long fileId = fileDao.insertFileInfo(conn, fileInfo);
+			long fileId = fileDao.insertFileInfo(fileInfo);
 			//存入电影图片关联信息到t_movie_image表
 			MovieImageInfo movieImageInfo = new MovieImageInfo();
 			movieImageInfo.setEfsId(fileId);
@@ -121,7 +121,7 @@ public class MovieService {
 			movieImageInfo.setFileType(FileUsedType.lookup(fileInfo.getFileType().value()));
 			dao.insertMovieImageInfo(conn, movieImageInfo);
 			
-			//返回电影在豆瓣250中排位信息
+			//返回电影在豆瓣250中排位信息, 插入t_parameter_app
 			movieTagMap.put(movieInfo.getId(), 999999-movieBO.getNo());
 			conn.commit();
 			logger.info("拉取第"+movieBO.getNo()+"条电影成功");
@@ -147,7 +147,7 @@ public class MovieService {
 //        int fileSize = fileSystem.uploadFile(writePath, inputStream);
 //        System.out.println(fileSize);
 		
-		Utils.initLog4j();
+//		Utils.initLog4j();
 		String douban250Url = "http://movie.douban.com/top250";
 		int startNo = 0;
 		int j = 0;
@@ -166,7 +166,6 @@ public class MovieService {
 						System.out.println(j++);
 						MovieBO movieBO = SpiderDouBan250.parseMovieInfoFromWeb(liElement);
 						MovieService.getInstance().spiderDoubanMovieInfo(movieBO, movieTagMap);
-						System.out.println("xxxxxxxxxx");
 					} catch (Exception e) {
 						logger.error(e);
 						continue;
