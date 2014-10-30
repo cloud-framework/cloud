@@ -5,9 +5,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import cn.egame.common.data.SqlUtils;
 
+import com.cloud.open.entity.po.FileInfo;
 import com.cloud.spider.dao.FileDao;
 import com.cloud.spider.entity.constants.FileUsedType;
-import com.cloud.spider.entity.po.FileInfo;
 
 public class TestFileDao {
 	public static void main(String[] args) {

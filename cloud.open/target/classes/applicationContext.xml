@@ -13,15 +13,25 @@
        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
 	<!-- 扫描类包，将标注Spring注解的类自动转化Bean，同时完成Bean的注入 -->
-	<context:component-scan base-package="com.cloud.open" />
+	<context:component-scan base-package="com.cloud.open,com.cloud.spider" />
 
 	<!-- 配置数据源 -->
 	<!-- org.apache.commons.dbcp.BasicDataSource -->
+
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close" p:driverClassName="com.mysql.jdbc.Driver"
+		p:url="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_cloudframework" p:username="1j23nnwkxn"
+		p:password="y4ziyx410z014ji1z0jk2w51li40x511mwiz1m3w" /> -->
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close" p:driverClassName="com.mysql.jdbc.Driver"
 		p:url="jdbc:mysql://localhost:3306/cloud" p:username="root"
 		p:password="root" />
+		
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close" p:driverClassName="com.mysql.jdbc.Driver"
+		p:url="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_wendellup" p:username="4j24mwozzl"
+		p:password="hy33hmj52k403w42k02kykhmyl0j3m1jm34jxwxk" /> -->
 
 	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
 		p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql://sqld.duapp.com:4050/XcTqKKufocDhgcgYdIxe" 

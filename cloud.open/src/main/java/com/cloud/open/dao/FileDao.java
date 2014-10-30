@@ -1,4 +1,4 @@
-package com.cloud.spider.dao;
+package com.cloud.open.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,10 +14,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Service;
 
 import cn.egame.common.data.SqlUtils;
-import cn.egame.common.exception.ExceptionCommonBase;
 
-import com.cloud.open.entity.exception.ErrorCode;
-import com.cloud.open.entity.exception.ExceptionCommon;
 import com.cloud.open.entity.po.FileInfo;
 
 @Service
@@ -73,36 +70,5 @@ public class FileDao{
 		
 		int generatedId = keyHolder.getKey().intValue();
 		return generatedId;
-	}
-	
-	public Long updateFileInfo(final FileInfo fileInfo) throws ExceptionCommonBase{
-		if(fileInfo == null || fileInfo.getId() <= 0){
-			ExceptionCommon.throwExceptionCommon(new ExceptionCommon(ErrorCode.DATABASE_EMPTY_ENTITY
-					, "fileInfo == null || fileInfo.getId() <= 0"));
-		}
-		String sql = " udpate t_file set app_id = %1$d, u_id = %2$d, file_name=%3$s "
-				+ " ,file_type=%4$d, image_type=%5$s, file_size=%6$d, save_name=%7$s "
-				+ " ,is_save=%8$d, is_delete=%9$d, is_complete=%10$d where id=%11$d ";
-		
-		sql = String.format(sql, fileInfo.getAppId(), fileInfo.getuId()
-				, SqlUtils.QuataStr(fileInfo.getFileName()), fileInfo.getFileUsedType().value()
-				, SqlUtils.QuataStr(fileInfo.getImageType()), fileInfo.getFileSize()
-				, SqlUtils.QuataStr(fileInfo.getSaveName()), fileInfo.getIsSave()
-				, fileInfo.getIsDelete(), fileInfo.getIsComplete(), System.currentTimeMillis());
-		logger.info("operate t_game SQL: " + sql);
-		
-		jdbcTemplate.update(sql);
-		return fileInfo.getId();
-		
-		jdbcTemplate.update(new PreparedStatementCreator() {
-			public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-		        if (fileInfo != null) {
-		            PreparedStatement ps = connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-		            return ps;
-		        }
-		        return null;
-			}
-		});
-		
 	}
 }

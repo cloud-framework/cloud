@@ -1,13 +1,13 @@
-package com.cloud.spider.entity.po;
+package com.cloud.open.entity.po;
 
-import com.cloud.spider.entity.constants.FileUsedType;
+import com.cloud.open.entity.constants.FileUsedType;
 
 public class FileInfo {
 	private Long id;
 	private Long appId;
 	private Long uId;
 	private String fileName;
-	private FileUsedType fileType;
+	private FileUsedType fileUsedType;
 	private String imageType;
 	private Long fileSize;
 	private String saveName;
@@ -16,7 +16,14 @@ public class FileInfo {
 	private Boolean isComplete;
 	private Long createTime;
 	
+	private String filePath;
 	
+	public String getFilePath() {
+		return filePath;
+	}
+	public void setFilePath(String filePath) {
+		this.filePath = filePath;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -41,11 +48,12 @@ public class FileInfo {
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-	public FileUsedType getFileType() {
-		return fileType;
+	
+	public FileUsedType getFileUsedType() {
+		return fileUsedType;
 	}
-	public void setFileType(FileUsedType fileType) {
-		this.fileType = fileType;
+	public void setFileUsedType(FileUsedType fileUsedType) {
+		this.fileUsedType = fileUsedType;
 	}
 	public String getImageType() {
 		return imageType;

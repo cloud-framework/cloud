@@ -17,9 +17,10 @@
 	<mvc:annotation-driven />
 	<context:component-scan base-package="com.cloud.open" />
 
-	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
 		<property name="prefix" value="/WEB-INF/views/" /> <property name="suffix" 
-		value=".jsp" /> </bean> -->
+		value=".jsp" /> 
+	</bean>
 
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
@@ -27,7 +28,7 @@
 			<list>
 				<ref bean="stringHttpMessageConverter" />
 				<ref bean="jsonHttpMessageConverter" />
-				<ref bean="marshallingHttpMessageConverter" />
+				<!-- <ref bean="marshallingHttpMessageConverter" /> -->
 			</list>
 		</property>
 	</bean>
@@ -37,7 +38,7 @@
 	<bean id="jsonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
 	<!-- <bean id="jsonHttpMessageConverter" class="com.cloud.open.web.json.base.CloudMappingJacksonHttpMessageConverter" /> -->
 
-	<bean id="marshallingHttpMessageConverter"
+<!-- 	<bean id="marshallingHttpMessageConverter"
 		class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
 		<constructor-arg ref="jaxbMarshaller" />
 		<property name="supportedMediaTypes" value="application/xml"></property>
@@ -49,17 +50,20 @@
 				<value>com.cloud.valueobject.vo.MovieInfo</value>
 			</list>
 		</property>
-	</bean>
+	</bean> -->
 
 	
 	
 	<!-- 多视图 -->
+	<!-- 
 	<bean name="jsonView" class="com.cloud.open.web.json.base.JsonView">
 	</bean>
+	 -->
 
 	<!-- <bean name="exceptionCommonBase" class="cn.egame.common.exception.ExceptionCommonBase"> 
 		</bean> -->
-	<!-- <bean id="viewResolver" class="com.cloud.open.web.json.base.MultiViewResover">
+		
+	<bean id="viewResolver" class="com.cloud.open.web.json.base.MultiViewResover">
 		<property name="resolvers">
 			<map>
 				<entry key="jsp">
@@ -75,6 +79,6 @@
 				</entry>
 			</map>
 		</property>
-	</bean> -->
+	</bean>
 
 </beans>

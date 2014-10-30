@@ -10,7 +10,7 @@ import cn.egame.common.data.BaseDao;
 import cn.egame.common.data.SqlUtils;
 import cn.egame.common.exception.ExceptionCommonBase;
 
-import com.cloud.spider.entity.po.FileInfo;
+import com.cloud.open.entity.po.FileInfo;
 
 public class FileDao_ extends BaseDao{
 	private static Logger logger = Logger.getLogger(FileDao_.class);
@@ -28,7 +28,7 @@ public class FileDao_ extends BaseDao{
         			+ " values(%1$d, %2$d, %3$s, %4$d, %5$s, %6$d, %7$s"
         			+ " , %8$d, %9$d, %10$d, %11$d) ";
             sql = String.format(sql, fileInfo.getAppId(), fileInfo.getuId()
-            		, SqlUtils.QuataStr(fileInfo.getFileName()), fileInfo.getFileType().value()
+            		, SqlUtils.QuataStr(fileInfo.getFileName()), fileInfo.getFileUsedType().value()
             		, SqlUtils.QuataStr(fileInfo.getImageType()), fileInfo.getFileSize()
             		, SqlUtils.QuataStr(fileInfo.getSaveName()), fileInfo.getIsSave()
             		, fileInfo.getIsDelete(), fileInfo.getIsComplete(), System.currentTimeMillis());

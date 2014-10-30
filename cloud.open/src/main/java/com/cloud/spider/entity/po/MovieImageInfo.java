@@ -2,7 +2,7 @@ package com.cloud.spider.entity.po;
 
 import java.sql.Date;
 
-import com.cloud.spider.entity.constants.FileUsedType;
+import com.cloud.open.entity.constants.FileUsedType;
 
 public class MovieImageInfo {
 	private Long efsId;
