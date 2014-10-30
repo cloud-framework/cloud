@@ -1,4 +1,4 @@
-package com.cloud.spider.entity.constants;
+package com.cloud.open.entity.constants;
 
 import java.util.TreeMap;
 
@@ -12,7 +12,7 @@ public enum FileUsedType {
             FileUsedType.ALBUM_PHOTO_MID), album_photo_big(FileUsedType.ALBUM_PHOTO_BIG), game_backgroud(FileUsedType.GAME_BACKGROUD), head_default(
             FileUsedType.HEAD_DEFAULT), head_backgroud(FileUsedType.HEAD_BACKGROUD), video(FileUsedType.VIDEO), video_image(
             FileUsedType.VIDEO_IMAGE), cms_photo(FileUsedType.CMS_PHOTO), cms_file(FileUsedType.CMS_FILE), act_photo(FileUsedType.ACT_PHOTO), act_file(
-            FileUsedType.ACT_FILE);
+            FileUsedType.ACT_FILE),channel_file(FileUsedType.CHANNEL_FILE);
     // thumbnail
     public final static int GAME = 1;
     public final static int VIDEO = 2;
@@ -40,6 +40,7 @@ public enum FileUsedType {
     public final static int CMS_FILE = 601;// WEB CMS
     public final static int ACT_PHOTO = 700;// WEB 活动
     public final static int ACT_FILE = 701;// WEB 活动
+    public final static int CHANNEL_FILE=800;//好盟
 
     public final static int FILE = 1000;
     int value = 0;

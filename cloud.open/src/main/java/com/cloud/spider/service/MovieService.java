@@ -19,13 +19,13 @@ import cn.egame.common.efs.SFileSystemClient;
 import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.util.Utils;
 
+import com.cloud.open.entity.constants.FileUsedType;
+import com.cloud.open.entity.po.FileInfo;
 import com.cloud.spider.dao.FileDao;
 import com.cloud.spider.dao.MovieDao;
 import com.cloud.spider.dao.ParameterDao;
 import com.cloud.spider.entity.bo.MovieBO;
 import com.cloud.spider.entity.constants.ConstVar;
-import com.cloud.spider.entity.constants.FileUsedType;
-import com.cloud.spider.entity.po.FileInfo;
 import com.cloud.spider.entity.po.MovieImageInfo;
 import com.cloud.spider.entity.po.MovieInfo;
 import com.cloud.spider.entity.po.ParameterTagLinkInfo;
@@ -110,7 +110,7 @@ public class MovieService {
 			//存入图片信息到t_file表
 			FileInfo fileInfo = new FileInfo();
 			fileInfo.setFileName(Utils.getFileName(movieBO.getIconUrl()));
-			fileInfo.setFileType(FileUsedType.file);
+			fileInfo.setFileUsedType(FileUsedType.file);
 			fileInfo.setFileSize(fileSize);
 			fileInfo.setSaveName(Utils.getFileName(movieBO.getIconUrl()));
 			long fileId = fileDao.insertFileInfo(fileInfo);
@@ -118,7 +118,7 @@ public class MovieService {
 			MovieImageInfo movieImageInfo = new MovieImageInfo();
 			movieImageInfo.setEfsId(fileId);
 			movieImageInfo.setmId(mId);
-			movieImageInfo.setFileType(FileUsedType.lookup(fileInfo.getFileType().value()));
+			movieImageInfo.setFileType(FileUsedType.lookup(fileInfo.getFileUsedType().value()));
 			dao.insertMovieImageInfo(conn, movieImageInfo);
 			
 			//返回电影在豆瓣250中排位信息, 插入t_parameter_app
