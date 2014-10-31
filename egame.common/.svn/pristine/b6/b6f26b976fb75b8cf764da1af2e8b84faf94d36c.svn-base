@@ -1,0 +1,31 @@
+package cn.egame.common.model;
+
+public class RankBase<T1, T2, T3> {
+	public T1 getId() {
+		return id;
+	}
+
+	public void setId(T1 id) {
+		this.id = id;
+	}
+
+	public T2 getScore() {
+		return score;
+	}
+
+	public void setScore(T2 score) {
+		this.score = score;
+	}
+
+	public T3 getObj() {
+		return obj;
+	}
+
+	public void setObj(T3 obj) {
+		this.obj = obj;
+	}
+
+	T1 id;
+	T2 score;
+	T3 obj;
+}

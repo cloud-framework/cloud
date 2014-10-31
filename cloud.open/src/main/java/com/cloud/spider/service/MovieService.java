@@ -19,9 +19,9 @@ import cn.egame.common.efs.SFileSystemClient;
 import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.util.Utils;
 
+import com.cloud.open.dao.FileDao;
 import com.cloud.open.entity.constants.FileUsedType;
 import com.cloud.open.entity.po.FileInfo;
-import com.cloud.spider.dao.FileDao;
 import com.cloud.spider.dao.MovieDao;
 import com.cloud.spider.dao.ParameterDao;
 import com.cloud.spider.entity.bo.MovieBO;

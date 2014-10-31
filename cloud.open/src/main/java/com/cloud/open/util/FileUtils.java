@@ -6,13 +6,13 @@ import cn.egame.common.util.Utils;
 
 import com.cloud.open.entity.constants.FileUsedType;
 import com.cloud.open.entity.exception.ErrorCode;
-import com.cloud.open.entity.exception.ExceptionCommon;
+import com.cloud.open.entity.exception.ServiceExceptionBase;
 
 public class FileUtils {
-    public static String getFilePath(FileUsedType fileType, long fileId, String fileName) throws NoSuchAlgorithmException, ExceptionCommon {
+    public static String getFilePath(FileUsedType fileType, long fileId, String fileName) throws ServiceExceptionBase {
         String extName = Utils.getFileExtName(fileName);
         if (Utils.stringIsNullOrEmpty(extName)) {
-            throw new ExceptionCommon(ErrorCode.ParameterError, fileType.toString());
+            throw new ServiceExceptionBase(ErrorCode.ParameterError, fileType.toString());
         }
         switch (fileType.value()) {
         case FileUsedType.GAME:
@@ -72,16 +72,16 @@ public class FileUtils {
         case FileUsedType.CHANNEL_FILE:
             return "o/cpkg/wm" + Utils.toPath("/", fileId) + "/" + Utils.toFileName(fileId)+ "/" + fileName;
         default:
-            throw new ExceptionCommon(ErrorCode.NotImplementCode, fileType.toString());
+            throw new ServiceExceptionBase(ErrorCode.NotImplementCode, fileType.toString());
         }
     }
 
-    public static String getFileDir(FileUsedType fileType, long fileId) throws NoSuchAlgorithmException, ExceptionCommon {
+    public static String getFileDir(FileUsedType fileType, long fileId) throws NoSuchAlgorithmException, ServiceExceptionBase {
         switch (fileType.value()) {
         case FileUsedType.CHANNEL_FILE:
             return "o/cpkg/wm" + Utils.toPath("/", fileId) + "/" + Utils.toFileName(fileId)+"/";
         default:
-            throw new ExceptionCommon(ErrorCode.NotImplementCode, fileType.toString());
+            throw new ServiceExceptionBase(ErrorCode.NotImplementCode, fileType.toString());
         }
     }
 }

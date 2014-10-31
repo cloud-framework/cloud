@@ -1,7 +1,5 @@
 package com.cloud.open.entity.exception;
 
-import cn.egame.common.exception.ErrorCodeBase;
-
 public class ErrorCode extends ErrorCodeBase {
 
     // public static final int UnDefinedServerError = -1;

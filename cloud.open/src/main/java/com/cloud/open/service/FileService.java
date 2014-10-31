@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.security.NoSuchAlgorithmException;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,16 +11,16 @@ import org.springframework.stereotype.Service;
 
 import cn.egame.common.efs.IFileSystem;
 import cn.egame.common.efs.SFileSystemClient;
+import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.util.ImageUtils;
 import cn.egame.common.util.Utils;
 
+import com.cloud.open.dao.FileDao;
 import com.cloud.open.entity.constants.ConstVar;
 import com.cloud.open.entity.constants.FileUsedType;
-import com.cloud.open.entity.exception.ExceptionCommon;
+import com.cloud.open.entity.exception.ServiceExceptionBase;
 import com.cloud.open.entity.po.FileInfo;
-import com.cloud.open.entity.po.ImageScaleInfo;
 import com.cloud.open.util.FileUtils;
-import com.cloud.spider.dao.FileDao;
 
 @Service
 public class FileService {
@@ -43,7 +42,7 @@ public class FileService {
      *            :文件名称
      * @return
      */
-    public long writeToFile(InputStream in, int type, int appId, long loginUserId, String fileName, boolean... isScale) {
+    public long writeToFile(InputStream in, int type, int appId, long loginUserId, String fileName, boolean... isScale){
         String readRootPath = ConstVar.UPLOAD_ADDRESS;
         String writeRootPath = ConstVar.UPLOAD_WRITE_ADDRESS;
         long efsId = 0;
@@ -52,15 +51,16 @@ public class FileService {
         fileInfo.setFileName(fileName);
         fileInfo.setFileUsedType(FileUsedType.lookup(type));
         fileInfo.setCreateTime(System.currentTimeMillis());
-        efsId = fileDao.insertFileInfo(fileInfo);
+        fileInfo.setOperatorId(loginUserId);
         OutputStream out = null;
         try {
+        	efsId = fileDao.insertFileInfo(fileInfo);
             if (efsId > 0) {
                 String filePath = FileUtils.getFilePath(FileUsedType.lookup(type), efsId, fileName);
                 LOGGER.info("filePath:" + filePath);
                 String writePath = writeRootPath + filePath;
                 String readPath = readRootPath + filePath;
-                IFileSystem fileSystem = SFileSystemClient.getInstance("egame");
+                IFileSystem fileSystem = SFileSystemClient.getInstance("cloud");
                 LOGGER.info("writePath:" + writePath);
                 LOGGER.info("readPath:" + readPath);
                 fileSystem.mkdirs(writePath);
@@ -82,13 +82,9 @@ public class FileService {
             } else {
                 return -1;
             }
-        } catch (ExceptionCommon e) {
+        } catch (ExceptionCommonBase e) {
         	LOGGER.error(FileService.class, e);
-        } catch (NoSuchAlgorithmException e) {
-        	LOGGER.error(FileService.class, e);
-        } catch (IOException e) {
-        	LOGGER.error(FileService.class, e);
-        } catch (Exception e) {
+        } catch (ServiceExceptionBase e) {
         	LOGGER.error(FileService.class, e);
         } finally {
             if (in != null) {
@@ -109,7 +105,7 @@ public class FileService {
         return -1;
     }
     
-    private static long saveTFile(int fileUserdType, FileInfo fileInfo, int appId, long loginUserId, String writeRootPaht,
+    private long saveTFile(int fileUserdType, FileInfo fileInfo, int appId, long loginUserId, String writeRootPaht,
             String readRootPath, String fileSystemType, boolean... isScale) {
         String filePath = fileInfo.getFilePath();
         String fileName = fileInfo.getFileName();
@@ -141,18 +137,18 @@ public class FileService {
         String saveName = fileInfo.getSaveName();
         if (FileUsedType.lookup(fileUserdType).value() == FileUsedType.GAME) {
             saveName = fileName;
-            try {
+//            try {
             	//md5加密
 //            	String readPath = readRootPath + filePath;
 //            	String md5 = Utils.encryptFileMD5(readPath);
 //            	fileInfo.setMd5(md5);
-			} catch (Throwable e) {
-				LOGGER.error("", e);
-			}
+//			} catch (Throwable e) {
+//				LOGGER.error("", e);
+//			}
         }
         fileInfo.setSaveName(saveName);
-        fileInfo.setIsSave(true);
-        fileInfo.setIsComplete(true);
+        fileInfo.setComplete(true);
+        fileInfo.setSave(true);
         // 上传成功后更新save字段
         if (setTFileInfo(fileInfo, appId, loginUserId) > 0) {
             return efsId;
@@ -160,11 +156,11 @@ public class FileService {
         return -1;
     }
     
-    private long setTFileInfo(FileInfo fileInfo, int appId, long loginUserId) {
+    private long setTFileInfo(FileInfo fileInfo, int appId, long loginUserId){
         try {
             return fileDao.updateFileInfo(fileInfo);
-        } catch (ExceptionCommon e) {
-            LOGGER.error(e);
+        } catch (ServiceExceptionBase e) {
+            LOGGER.error("", e);
             return -1;
         }
 

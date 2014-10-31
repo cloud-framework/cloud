@@ -3,14 +3,13 @@ package test.spider.dao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import cn.egame.common.data.SqlUtils;
-
+import com.cloud.open.dao.FileDao;
+import com.cloud.open.entity.constants.FileUsedType;
+import com.cloud.open.entity.exception.ServiceExceptionBase;
 import com.cloud.open.entity.po.FileInfo;
-import com.cloud.spider.dao.FileDao;
-import com.cloud.spider.entity.constants.FileUsedType;
 
 public class TestFileDao {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ServiceExceptionBase {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
 //		IUserServ iuserServ = (IUserServ) ac.getBean("userServImpl");
 //		iuserServ.saveUser(new User());
@@ -23,13 +22,13 @@ public class TestFileDao {
 		fileInfo.setFileName("xxx");
 		fileInfo.setAppId(1L);
 		fileInfo.setuId(1L);
-		fileInfo.setFileType(FileUsedType.adver_photo);
+		fileInfo.setFileUsedType(FileUsedType.adver_photo);
 		fileInfo.setImageType("");
 		fileInfo.setFileSize(10L);
 		fileInfo.setSaveName("");
-		fileInfo.setIsSave(true);
-		fileInfo.setIsComplete(true);
-		fileInfo.setIsDelete(false);
+		fileInfo.setSave(true);
+		fileInfo.setComplete(true);
+		fileInfo.setDelete(false);
 		int id = fileDao.insertFileInfo(fileInfo);
 		System.out.println(id);
 	}

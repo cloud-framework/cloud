@@ -64,6 +64,8 @@ CREATE TABLE `t_file` (
   `is_delete` tinyint(1) DEFAULT '0',
   `is_complete` tinyint(1) DEFAULT '0',
   `create_time` bigint(20) DEFAULT '0',
+  `update_time` bigint(20) DEFAULT '0',
+  `operator_id` bigint(20) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 

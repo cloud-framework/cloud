@@ -30,8 +30,8 @@ public class FileDao_ extends BaseDao{
             sql = String.format(sql, fileInfo.getAppId(), fileInfo.getuId()
             		, SqlUtils.QuataStr(fileInfo.getFileName()), fileInfo.getFileUsedType().value()
             		, SqlUtils.QuataStr(fileInfo.getImageType()), fileInfo.getFileSize()
-            		, SqlUtils.QuataStr(fileInfo.getSaveName()), fileInfo.getIsSave()
-            		, fileInfo.getIsDelete(), fileInfo.getIsComplete(), System.currentTimeMillis());
+            		, SqlUtils.QuataStr(fileInfo.getSaveName()), fileInfo.isSave()
+            		, fileInfo.isDelete(), fileInfo.isComplete(), System.currentTimeMillis());
             logger.debug("operate t_game SQL: " + sql);
             identity = this.getIdentityId(conn, sql);
         }

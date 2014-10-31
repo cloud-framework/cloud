@@ -1,0 +1,59 @@
+package cn.egame.common.operation.factory;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+import cn.egame.common.operation.ICheckHealth;
+import cn.egame.common.operation.ResultHealth;
+import cn.egame.common.util.Utils;
+
+public class CheckRMIServerHealth  implements ICheckHealth{
+
+	public CheckRMIServerHealth(){
+	}
+	int port;
+	
+	public CheckRMIServerHealth(String port){
+		this.port =Utils.toInt(port, 834);
+	}
+	
+	
+	@Override
+	public ResultHealth checkHealth() {
+		ResultHealth result = new ResultHealth();
+		result.setCode(telnet("127.0.0.1", port));
+		result.setName("rmi_server");
+		return result;
+	}
+
+	@Override
+	public String getName() {
+		return null;
+	}
+
+	@Override
+	public Object getResult() {
+		return null;
+	}
+	
+	 public static int telnet(String ip, int port) {
+	        Socket socket = null;
+	        try {
+	            socket = new Socket(ip, port);
+	        } catch (UnknownHostException e) {
+	            e.printStackTrace();
+	        } catch (IOException e) {
+	            return 0;
+	        } finally {
+	            if (socket != null) {
+	                try {
+	                    socket.close();
+	                } catch (IOException e) {
+	                }
+	            }
+	        }
+	        return 1;
+	    }
+
+}

@@ -11,10 +11,12 @@ public class FileInfo {
 	private String imageType;
 	private Long fileSize;
 	private String saveName;
-	private Boolean isSave;
-	private Boolean isDelete;
-	private Boolean isComplete;
+	private boolean isSave;
+	private boolean isDelete;
+	private boolean isComplete;
 	private Long createTime;
+	private Long updateTime;
+	private Long operatorId;
 	
 	private String filePath;
 	
@@ -73,22 +75,23 @@ public class FileInfo {
 	public void setSaveName(String saveName) {
 		this.saveName = saveName;
 	}
-	public Boolean getIsSave() {
+	
+	public boolean isSave() {
 		return isSave;
 	}
-	public void setIsSave(Boolean isSave) {
+	public void setSave(boolean isSave) {
 		this.isSave = isSave;
 	}
-	public Boolean getIsDelete() {
+	public boolean isDelete() {
 		return isDelete;
 	}
-	public void setIsDelete(Boolean isDelete) {
+	public void setDelete(boolean isDelete) {
 		this.isDelete = isDelete;
 	}
-	public Boolean getIsComplete() {
+	public boolean isComplete() {
 		return isComplete;
 	}
-	public void setIsComplete(Boolean isComplete) {
+	public void setComplete(boolean isComplete) {
 		this.isComplete = isComplete;
 	}
 	public Long getCreateTime() {
@@ -97,6 +100,17 @@ public class FileInfo {
 	public void setCreateTime(Long createTime) {
 		this.createTime = createTime;
 	}
-	
+	public Long getUpdateTime() {
+		return updateTime;
+	}
+	public void setUpdateTime(Long updateTime) {
+		this.updateTime = updateTime;
+	}
+	public Long getOperatorId() {
+		return operatorId;
+	}
+	public void setOperatorId(Long operatorId) {
+		this.operatorId = operatorId;
+	}
 	
 }
