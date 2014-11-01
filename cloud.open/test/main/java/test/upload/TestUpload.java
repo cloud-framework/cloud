@@ -54,9 +54,9 @@ public class TestUpload {
 //		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.VIDEO, 0, 0, "avi.avi");
 //		System.out.println(efsId);
 		
-		InputStream inputStream2 = new FileInputStream(new File("F:\\test1\\MyEclipse.10.5.Crack.rar"));
+		InputStream inputStream2 = new FileInputStream(new File("C:\\Users\\thinkpad\\Desktop\\pic\\tbs1.jpg"));
 		System.out.println(inputStream2.available());
-		long efsId2 = fileService.writeToFile(inputStream2, FileUsedType.GAME, 0, 0, "MyEclipse.10.5.Crack.rar", true);
+		long efsId2 = fileService.writeToFile(inputStream2, FileUsedType.GAME, 0, 0, "tbs1.jpg", true);
 		System.out.println(efsId2);
 		
 		
