@@ -6,11 +6,15 @@ import cn.egame.common.util.Utils;
 
 public class ConstVar {
 	public static String DOUBAN_250_FILE_ROOT = "";
+	public static String JIANDANMEIZI_CURRENT_PAGE_FILE_PATH = "";
 	
 	static{
 		Properties properties = getProperties();
 		DOUBAN_250_FILE_ROOT = getPropertiesValueByKey(properties, "douban_250_file_root", DOUBAN_250_FILE_ROOT);
 		System.out.println("douban_250_file_root========"+DOUBAN_250_FILE_ROOT);
+		
+		JIANDANMEIZI_CURRENT_PAGE_FILE_PATH = getPropertiesValueByKey(properties, "jiandanmeizi_current_page_file_path", JIANDANMEIZI_CURRENT_PAGE_FILE_PATH);
+		System.out.println("jiandanmeizi_current_page_file_path========"+JIANDANMEIZI_CURRENT_PAGE_FILE_PATH);
 		
 	}
 	

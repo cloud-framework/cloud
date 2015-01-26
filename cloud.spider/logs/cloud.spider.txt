@@ -5263,3 +5263,6 @@ org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://m
 2014-08-21 15:57:38,720 [main] [com.cloud.spider.service.MovieService] [INFO] [127] - 拉取第248条电影成功
 2014-08-21 15:57:39,217 [main] [com.cloud.spider.service.MovieService] [INFO] [127] - 拉取第249条电影成功
 2014-08-21 15:57:39,792 [main] [com.cloud.spider.service.MovieService] [INFO] [127] - 拉取第250条电影成功
+2015-01-25 22:53:37,159 [main] [Util] [INFO] [554] - logfile:E:\git_github\cloud-framework\cloud\cloud.spider\logs\cloud.spider.txt
+2015-01-25 22:55:54,153 [main] [Util] [INFO] [554] - logfile:E:\git_github\cloud-framework\cloud\cloud.spider\logs\cloud.spider.txt
+2015-01-25 22:55:54,176 [main] [com.cloud.spider.handler.SpiderJiandanMeizi] [INFO] [56] - 110
