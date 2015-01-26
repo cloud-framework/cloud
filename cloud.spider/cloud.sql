@@ -114,3 +114,30 @@ CREATE TABLE `t_parameter_tag_link` (
 ##t_movie_source_url
 ##t_movie_source_web
 
+CREATE TABLE `t_product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '产品编号',
+  `product_type` varchar(65) DEFAULT NULL COMMENT '产品类型',
+  `product_name` varchar(128) DEFAULT NULL COMMENT '产品名称',
+  `product_src_page_id` int(16) DEFAULT NULL COMMENT '产品所在原网页的页码',
+  `product_src_id` int(16) DEFAULT NULL COMMENT '产品所在原网页的编码',
+  `product_author` varchar(256) DEFAULT NULL COMMENT '产品作者名',
+  `release_time` datetime DEFAULT '0000-00-00 00:00:00' COMMENT '产品原网站上传时间',
+  `product_relative_id` varchar(64) DEFAULT NULL COMMENT '豆瓣电影对应的id',
+  `operator_id` int(16) DEFAULT '0' COMMENT '操作员',
+  `insert_time` datetime DEFAULT '1970-01-01 00:00:00' COMMENT '入库时间',
+  `update_time` datetime DEFAULT '0000-00-00 00:00:00' COMMENT '更新时间',
+  `operator_name` varchar(128) DEFAULT NULL COMMENT '操作人员',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+CREATE TABLE `t_product_image` (
+  `efs_id` bigint(16) NOT NULL,
+  `product_id` int(11) NOT NULL DEFAULT '0',
+  `operator_id` int(16) DEFAULT '0',
+  `insert_time` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
+  `update_time` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
+  `file_type` int(16) NOT NULL DEFAULT '0',
+  `sort` int(16) DEFAULT NULL,
+  PRIMARY KEY (`efs_id`,`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
