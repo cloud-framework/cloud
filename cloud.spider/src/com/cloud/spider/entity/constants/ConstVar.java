@@ -7,6 +7,7 @@ import cn.egame.common.util.Utils;
 public class ConstVar {
 	public static String DOUBAN_250_FILE_ROOT = "";
 	public static String JIANDANMEIZI_CURRENT_PAGE_FILE_PATH = "";
+	public static String JIANDAN_BORING_PIC_CURRENT_PAGE_FILE_PATH = "";
 	
 	static{
 		Properties properties = getProperties();
@@ -15,6 +16,9 @@ public class ConstVar {
 		
 		JIANDANMEIZI_CURRENT_PAGE_FILE_PATH = getPropertiesValueByKey(properties, "jiandanmeizi_current_page_file_path", JIANDANMEIZI_CURRENT_PAGE_FILE_PATH);
 		System.out.println("jiandanmeizi_current_page_file_path========"+JIANDANMEIZI_CURRENT_PAGE_FILE_PATH);
+		
+		JIANDAN_BORING_PIC_CURRENT_PAGE_FILE_PATH = getPropertiesValueByKey(properties, "jiandan_boring_pic_current_page_file_path", JIANDAN_BORING_PIC_CURRENT_PAGE_FILE_PATH);
+		System.out.println("jiandan_boring_pic_current_page_file_path========"+JIANDAN_BORING_PIC_CURRENT_PAGE_FILE_PATH);
 		
 	}
 	
