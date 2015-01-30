@@ -1,18 +1,12 @@
 package com.cloud.spider.service;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
+import java.sql.SQLException;
+import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import cn.egame.common.efs.IFileSystem;
 import cn.egame.common.efs.SFileSystemClient;
@@ -20,18 +14,15 @@ import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.util.Utils;
 
 import com.cloud.spider.dao.FileDao;
-import com.cloud.spider.dao.MovieDao;
-import com.cloud.spider.dao.ParameterDao;
 import com.cloud.spider.dao.ProductDao;
-import com.cloud.spider.entity.bo.MovieBO;
+import com.cloud.spider.entity.bo.ProductBO;
 import com.cloud.spider.entity.constants.ConstVar;
 import com.cloud.spider.entity.constants.EnumType.ProductType;
 import com.cloud.spider.entity.constants.FileUsedType;
 import com.cloud.spider.entity.po.FileInfo;
 import com.cloud.spider.entity.po.MovieImageInfo;
-import com.cloud.spider.entity.po.MovieInfo;
-import com.cloud.spider.entity.po.ParameterTagLinkInfo;
-import com.cloud.spider.handler.SpiderDouBan250;
+import com.cloud.spider.entity.po.ProductImageInfo;
+import com.cloud.spider.entity.po.ProductInfo;
 import com.cloud.spider.util.HttpUtils;
 
 public class ProductService {
@@ -51,12 +42,65 @@ public class ProductService {
 	}
 
 	private ProductDao productDao = null;
+	private FileDao fileDao = null;
+	
 	
 	public ProductService() throws ExceptionCommonBase {
 		productDao = new ProductDao();
+		fileDao = new FileDao();
 	}
 	
 	public Long getProductMaxIdByType(ProductType productType) throws ExceptionCommonBase{
 		return productDao.getMaxIdByType(productType);
+	}
+
+	public void storeProductAndImageInfo(ProductBO productBO) throws Exception {
+		Connection conn = productDao.getConnection();
+		conn.setAutoCommit(false);
+		try {
+			ProductInfo productInfo = new ProductInfo();
+			long identity = productDao.insertProductInfo(conn, productInfo);
+			//1.拉取每条信息对应的图片,并存入图片库
+			long fileSize = 0;
+			List<String> picUrlList = productBO.getPicUrl();
+			for(String url : picUrlList){
+				String writePath = ConstVar.UPLOAD_ADDRESS
+						+ Utils.getFileName(url);
+				File file = new File(writePath);
+				if (!(file.exists())) {
+					// 本地文件不存在则拉取文件
+					InputStream inputStream = HttpUtils
+							.getInputStreamFromUrl(url);
+					Thread.sleep(50);
+					IFileSystem fileSystem = SFileSystemClient
+							.getInstance("cloud");
+					logger.info("writePath:" + writePath);
+					fileSystem.mkdirs(writePath);
+					fileSize = fileSystem.uploadFile(writePath, inputStream);
+				}
+				
+				//存入图片信息到t_file表
+				FileInfo fileInfo = new FileInfo();
+				fileInfo.setFileName(Utils.getFileName(url));
+				fileInfo.setFileType(FileUsedType.file);
+				fileInfo.setFileSize(fileSize);
+				fileInfo.setSaveName(Utils.getFileName(url));
+				long fileId = fileDao.insertFileInfo(conn, fileInfo);
+				//存入电影图片关联信息到t_movie_image表
+				ProductImageInfo productImageInfo = new ProductImageInfo();
+				productImageInfo.setEfsId(fileId);
+				productImageInfo.setProductId(identity);
+				productImageInfo.setFileType(FileUsedType.lookup(fileInfo.getFileType().value()));
+				productDao.insertProductImageInfo(conn, productImageInfo);
+			}
+			conn.commit();
+			logger.info("拉取第"+productBO.getPage_id()+"页的id为"+productBO.getPic_id()+"的图片成功");
+		} catch (Exception e) {
+			conn.rollback();
+			logger.error("拉取第"+productBO.getPage_id()+"页的id为"+productBO.getPic_id()+"图片报错",e);
+			throw e;
+		} finally{
+			productDao.releaseConnection(conn);
+		}
 	}
 }
