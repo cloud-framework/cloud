@@ -113,7 +113,11 @@ public class SpiderJiandan {
 									Elements picElements = element.select(".row > .text > p > img");
 									List<String> picUrls = new ArrayList<String>();
 									for(Element picEle : picElements){
-										String picUrl = picEle.attr("src");
+										String picUrl = picEle.attr("org_src");
+										if(null==picUrl || "".equals(picUrl)){
+											picUrl = picEle.attr("src");
+										}
+										//如果包含org_src属性则拉取该属性对应的原图片
 										picUrls.add(picUrl);
 									}
 //									System.out.println("-----------------"+currentFetchPicId+"-------------------");
@@ -122,6 +126,7 @@ public class SpiderJiandan {
 									productBO.setPage_id(stored_boring_pic_page_id);
 									productBO.setPic_id(currentFetchPicId);
 									productBO.setPicUrl(picUrls);
+									productBO.setProductType(new Long(ProductType.jiandanBoringPic.value()));
 									ProductService.getInstance().storeProductAndImageInfo(productBO);
 									
 								}
@@ -192,7 +197,6 @@ public class SpiderJiandan {
 			Elements idOLElements = content.select(".commentlist > li");
 			if (idOLElements != null && idOLElements.size()>0) {
 				Elements idElements = idOLElements.get(0).select(".righttext > a");
-//				if(boring_pic_page_idS)
 				String boringPicIdStr = idElements.get(0).text();
 				if(boringPicIdStr.matches("\\d+")){
 					boring_pic_id = Utils.toInt(boringPicIdStr, 0);

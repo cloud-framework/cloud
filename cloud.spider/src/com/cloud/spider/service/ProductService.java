@@ -59,12 +59,20 @@ public class ProductService {
 		conn.setAutoCommit(false);
 		try {
 			ProductInfo productInfo = new ProductInfo();
+			productInfo.setProductSrcId(productBO.getPic_id());
+			productInfo.setProductSrcPageId(productBO.getPage_id());
+			productInfo.setProductType(productBO.getProductType());
+			productInfo.setProductStatus(1);
 			long identity = productDao.insertProductInfo(conn, productInfo);
 			//1.拉取每条信息对应的图片,并存入图片库
 			long fileSize = 0;
 			List<String> picUrlList = productBO.getPicUrl();
+			int picCount = 0;
 			for(String url : picUrlList){
+				picCount++;
 				String writePath = ConstVar.UPLOAD_ADDRESS
+						+File.separator+productInfo.getProductType()
+						+File.separator+productInfo.getProductSrcPageId()
 						+ Utils.getFileName(url);
 				File file = new File(writePath);
 				if (!(file.exists())) {
@@ -77,12 +85,15 @@ public class ProductService {
 					logger.info("writePath:" + writePath);
 					fileSystem.mkdirs(writePath);
 					fileSize = fileSystem.uploadFile(writePath, inputStream);
+				}else{
+					logger.info("第"+productBO.getPage_id()+"页的id为"+productBO.getPic_id()
+							+"的第"+picCount+"张图片"+productBO.getPicUrl()+"已经存在...");
 				}
 				
 				//存入图片信息到t_file表
 				FileInfo fileInfo = new FileInfo();
 				fileInfo.setFileName(Utils.getFileName(url));
-				fileInfo.setFileType(FileUsedType.file);
+				fileInfo.setFileType(FileUsedType.page_file);
 				fileInfo.setFileSize(fileSize);
 				fileInfo.setSaveName(Utils.getFileName(url));
 				long fileId = fileDao.insertFileInfo(conn, fileInfo);

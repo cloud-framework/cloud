@@ -10,6 +10,7 @@ public class ProductBO implements Serializable{
 	
 	private Long page_id;
 	private Long pic_id;
+	private Long productType;
 	private List<String> picUrl = new ArrayList<String>();
 	private String author;
 	
@@ -37,7 +38,11 @@ public class ProductBO implements Serializable{
 	public void setPicUrl(List<String> picUrl) {
 		this.picUrl = picUrl;
 	}
-	
-	
+	public Long getProductType() {
+		return productType;
+	}
+	public void setProductType(Long productType) {
+		this.productType = productType;
+	}
 	
 }
