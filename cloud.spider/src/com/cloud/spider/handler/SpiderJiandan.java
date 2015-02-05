@@ -3,8 +3,14 @@ package com.cloud.spider.handler;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,6 +24,8 @@ import org.jsoup.select.Elements;
 import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.util.Utils;
 import cn.egame.interfaces.ExceptionCommon;
+import cn.egame.interfaces.fl.FileUsedType;
+import cn.egame.interfaces.fl.FileUtils;
 
 import com.cloud.spider.entity.bo.ProductBO;
 import com.cloud.spider.entity.constants.ConstVar;
@@ -38,10 +46,6 @@ public class SpiderJiandan {
 	private long boring_pic_page_id = 0;
 	private long boring_pic_id = 0;
 	
-	public void fetch() throws Exception{
-		initAndValidFetchId();
-		parseAndFetchAPageBoringPic();
-	}
 	
 	/**
 	 * 拉取无聊图逻辑
@@ -50,9 +54,29 @@ public class SpiderJiandan {
 	 * 2.从数据库中读取已拉取的最大图片store_id
 	 * 3.解析煎蛋无聊图最大的页面page_id和最大的页面图片id
 	 * 4.如果拉取的页数store_page_id<=页面page_id且已拉取的store_id<=页面图片id则拉取一页图片
-	 *   ,并将拉取的store_page_id写回文件(如果page_id>store_page_id则store_page_id++写回,否则store_page_id写回),并重复1,2,3步骤.否则停止该程序
+	 * 5.将拉取的store_page_id写回文件(如果page_id>store_page_id则store_page_id++写回,否则store_page_id写回),并重复1,2,3,4步骤.否则停止该程序
 	 */
+	public void fetch() throws Exception{
+		while(true){
+			Thread.currentThread().sleep(5000);
+			
+			initAndValidFetchId();
+			//4
+			parseAndFetchAPageBoringPic();
+			//5
+			writeBackStorePageId();
+			
+		}
+		
+	}
 	
+	private void writeBackStorePageId() throws ExceptionCommonBase {
+		if(boring_pic_page_id>stored_boring_pic_page_id){
+			stored_boring_pic_page_id++;
+			writeIdToFile(ConstVar.JIANDAN_BORING_PIC_CURRENT_PAGE_FILE_PATH, stored_boring_pic_page_id);
+		}
+	}
+
 	public void initAndValidFetchId() throws Exception{
 		//1
 		stored_boring_pic_page_id = 
@@ -209,6 +233,27 @@ public class SpiderJiandan {
 	}
 	
 	
+	private void writeIdToFile(String filePath, long id) throws ExceptionCommonBase{
+		File file = new File(filePath);
+		if(!file.exists()){
+			throw new ExceptionCommonBase(-1, "存储开始扫描efs_id的文件不存在");
+		}
+		
+		PrintWriter pw = null;
+		try {
+			pw = new PrintWriter(new OutputStreamWriter(
+					new FileOutputStream(filePath), "utf-8"));
+			pw.println(id);
+		} catch (FileNotFoundException e) {
+			throw ExceptionCommonBase.throwExceptionCommonBase(e);
+		} catch (UnsupportedEncodingException e1) {
+			e1.printStackTrace();
+		} finally{
+			if(pw!=null){
+				pw.close();
+			}
+		}
+	}
 	
 	private long readIdFromFile(String filePath) throws ExceptionCommonBase{
 		File file = new File(filePath);

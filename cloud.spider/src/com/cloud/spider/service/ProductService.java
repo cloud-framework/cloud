@@ -71,7 +71,7 @@ public class ProductService {
 			for(String url : picUrlList){
 				picCount++;
 				String writePath = ConstVar.UPLOAD_ADDRESS
-						+File.separator+productInfo.getProductType()
+						+productInfo.getProductType()+File.separator+productBO.getPage_id()
 						+File.separator+productInfo.getProductSrcPageId()
 						+ Utils.getFileName(url);
 				File file = new File(writePath);
@@ -87,7 +87,7 @@ public class ProductService {
 					fileSize = fileSystem.uploadFile(writePath, inputStream);
 				}else{
 					logger.info("第"+productBO.getPage_id()+"页的id为"+productBO.getPic_id()
-							+"的第"+picCount+"张图片"+productBO.getPicUrl()+"已经存在...");
+							+"的第"+picCount+"张图片"+url+"已经存在...");
 				}
 				
 				//存入图片信息到t_file表
